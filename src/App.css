@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+body {
+    margin: 0px;
+    background-color:#1E1E24;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+}
+
+.App {
+  text-align: center;
+}
