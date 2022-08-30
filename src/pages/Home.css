@@ -1,0 +1,21 @@
+h1 {
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.presentation-div {
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.presentation-text {
+    align-self: center;
+    width: 50%;
+    text-align: left;
+}

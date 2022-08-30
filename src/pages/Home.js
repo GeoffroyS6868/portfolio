@@ -6,14 +6,17 @@ import Header from "../components/Header";
 function Home() {
   return (
     <div className="Home">
-        <Header></Header>
-      <h1>
-        Hello,
-        <br></br>
-        I'm Geoffroy,
-        <br></br>
-        student developer
-      </h1>
+      <Header></Header>
+      <div className="presentation-div">
+        <div className="presentation-text">
+          <h1>
+            Hi, I'm Geoffroy
+          </h1>
+          <h2>
+            Front End and Back End Developer
+          </h2>
+        </div>
+      </div>
     </div>
   );
 }

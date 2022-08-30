@@ -5,6 +5,7 @@
     flex-direction: row;
     justify-content: left;
     text-align: center;
+    font-weight: 300;
 }
 
 .Link-box {
@@ -18,13 +19,13 @@
 
 .Link {
     font-size: 2.5em;
-    color: #7C99B4;
+    color: #a5a5a5;
     text-decoration: none;
     transition: color 0.3s linear;
 }
 
 .Link:hover {
-    color: #8EB8E5;
+    color: #edae49;
 }
 
 nav {
