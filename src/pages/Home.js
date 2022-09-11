@@ -10,7 +10,7 @@ function Home() {
             Hi, I'm Geoffroy
           </h1>
           <p>
-            Front End and Back End Developer
+            I'm a student developer
           </p>
         </div>
       </div>

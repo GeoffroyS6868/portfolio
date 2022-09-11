@@ -4,7 +4,12 @@ import "./About.css";
 function About() {
   return (
     <div className="About">
-      <h1>In construction</h1>
+      <div className="about-pres">
+        <p className="pres-text">
+          My name is Geoffroy Stanger I'm 20 years old and I live in France.
+          I'm currently studying at Epitech Strasbourg where I'm learning to code and organize projects.
+        </p>
+      </div>
     </div>
   );
 }

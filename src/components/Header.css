@@ -13,7 +13,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin-left: 5em;
+    margin-left: 35%;
     width: 8em;
 }
 
@@ -32,5 +32,14 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: left;
-    margin-left: 5em;
+}
+
+@media only screen and (max-width: 500px) {
+    .Link-box {
+        margin-left: 0px;
+    }
+
+    .Header {
+        justify-content: center;
+    }
 }
