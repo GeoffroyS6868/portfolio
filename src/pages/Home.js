@@ -7,10 +7,10 @@ function Home() {
       <div className="presentation-div">
         <div className="presentation-text">
           <h1>
-            Hi, I'm Geoffroy
+            Bienvenue;
           </h1>
           <p>
-            I'm a student developer
+            Je suis Geoffroy Stanger, un développeur front-end et back-end.
           </p>
         </div>
       </div>

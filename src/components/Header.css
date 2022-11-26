@@ -13,15 +13,16 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin-left: 35%;
-    width: 8em;
+    margin-left: 3rem;
 }
 
 .Link {
     font-size: 2.5em;
+    justify-content: center;
     color: #a5a5a5;
     text-decoration: none;
     transition: color 0.3s linear;
+    width: 100%;
 }
 
 .Link:hover {
@@ -32,6 +33,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: left;
+    width: 100%;
 }
 
 @media only screen and (max-width: 500px) {
