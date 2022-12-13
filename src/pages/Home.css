@@ -65,3 +65,35 @@ p {
     font-weight: 500;
     font-size: 1.2vw;
 }
+
+@media screen and (min-width: 800px) {
+    .name-div {
+        font-size: 3vw;
+    }
+
+    .developer-div {
+        font-size: 1.5vw;
+    }
+
+    .biography {
+        font-size: 1.2vw;
+    }
+  }
+
+  @media screen and (max-width: 799px) {
+    .name-div {
+        font-size: 2rem;
+        height: 7%;
+    }
+
+    .developer-div {
+        font-size: 1rem;
+    }
+    
+    .biography {
+        margin-top: 3rem;
+        font-size: 0.8rem;
+        width: 40%;
+        margin-left: 60%;
+    }
+  }
