@@ -1,26 +1,8 @@
-/*h1 {
-    font-weight: 500;
-    font-size: 3rem;
-}
-
-p {
-    font-weight: 300;
-    font-size: 2rem;
-}
-
-.presentation-div {
-    margin-top: 7rem;
-    display: flex;
-    flex-direction: column;
-}
-
-.presentation-text {
-    align-self: center;
-    width: 50%;
-    text-align: left;
-}*/
-
 .Home {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
     margin: 3vh 3vh;
     border-color: black;
     border-width: 0.1vh;
