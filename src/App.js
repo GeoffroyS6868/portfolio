@@ -2,133 +2,21 @@ import * as React from "react";
 import { Routes, Route} from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
-import * as THREE from 'three';
-import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
-import { Canvas, extend, useFrame, useLoader, useThree } from "@react-three/fiber";
-import circleImg from './assets/circle.png';
-import { Suspense, useCallback, useMemo, useRef } from 'react';
-extend({OrbitControls})
-
-function CameraControls(){
-  const {
-    camera,
-    gl: {domElement}
-  } = useThree();
-
-  const controlsRef = useRef();
-  useFrame(() => {
-    controlsRef.current.update();
-    controlsRef.current.enabled = false;
-  });
-
-  return (
-    <orbitControls
-      ref={controlsRef}
-      args={[camera, domElement]}
-      autoRotate
-      autoRotateSpeed={-0.2}
-    />
-  );
-}
-
-function Points() {
-  const imgTex = useLoader(THREE.TextureLoader, circleImg);
-  const bufferRef = useRef();
-
-  let t = 0;
-  let f = 0.001;
-  let a = 2.3;
-  const graph = useCallback((x, z) => {
-    return Math.cos(f * (x ** 2 + z ** 2 + t)) * a;
-  }, [t, f, a])
-
-  const count = 100
-  const sep = 3
-  let positions = useMemo(() => {
-    let positions = []
-
-    for (let xi = 0; xi < count; xi++) {
-      for (let zi = 0; zi < count; zi++) {
-        let x = sep * (xi - count / 2);
-        let z = sep * (zi - count / 2);
-        let y = graph(x, z);
-        positions.push(x, y, z);
-      }
-    }
-
-    return new Float32Array(positions);
-  }, [count, sep, graph])
-
-  useFrame(() => {
-    t += 15
-    
-    const positions = bufferRef.current.array;
-
-    let i = 0;
-    for (let xi = 0; xi < count; xi++) {
-      for (let zi = 0; zi < count; zi++) {
-        let x = sep * (xi - count / 2);
-        let z = sep * (zi - count / 2);
-
-        positions[i + 1] = graph(x, z);
-        i += 3;
-      }
-    }
-
-    bufferRef.current.needsUpdate = true;
-  })
-
-  return (
-    <points>
-      <bufferGeometry attach="geometry">
-        <bufferAttribute
-          ref={bufferRef}
-          attach='attributes-position'
-          array={positions}
-          count={positions.length / 3}
-          itemSize={3}
-        />
-      </bufferGeometry>
-
-      <pointsMaterial
-        attach="material"
-        map={imgTex}
-        color={0x000000}
-        size={0.5}
-        sizeAttenuation
-        transparent={false}
-        alphaTest={0.5}
-        opacity={1.0}
-      />
-    </points>
-  );
-}
-
-function AnimationCanvasControlCamera() {
-  return (
-    <Canvas
-      colorManagement={false}
-      camera={{ position: [100, 10, 0], fov: 75 }}
-    >
-      <Suspense fallback={null}>
-        <Points />
-      </Suspense>
-      <CameraControls/>
-    </Canvas>
-  );
-}
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
+import AnimationCanvas from "./components/AnimationCanvas";
 
 function App() {
-  return (
-    <div className="App">
-      <Suspense fallback={<div>Loading...</div>}>
-        <AnimationCanvasControlCamera/>
-      </Suspense>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </div>
-  );
+    return (
+        <div className="App">
+            <AnimationCanvas/>
+            <Routes>
+                <Route path="/" element={<Home />}/>
+                <Route path="/projects" element={<Projects />}/>
+                <Route path="/contact" element={<Contact />}/>
+            </Routes>
+        </div>
+    );
 }
 
 export default App;

@@ -1,47 +1,24 @@
 .Header {
-    width: 100%;
-    height: 5rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    flex: 1 1;
+    margin: 3vh 3vh;
+    border-color: black;
+    border-width: 0.1vh;
+    border-style: solid;
+    height: 93.8vh;
+    width: calc(100% - 6.2vh);
+    justify-content: left;
     display: flex;
     flex-direction: row;
-    justify-content: left;
-    text-align: center;
-    font-weight: 300;
 }
 
-.Link-box {
+.header-div {
+    margin: 2% 2%;
+    width: 96%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin-left: 3rem;
-}
-
-.Link {
-    font-size: 2.5em;
-    justify-content: center;
-    color: #a5a5a5;
-    text-decoration: none;
-    transition: color 0.3s linear;
-    width: 100%;
-}
-
-.Link:hover {
-    color: #edae49;
-}
-
-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    width: 100%;
-}
-
-@media only screen and (max-width: 500px) {
-    .Link-box {
-        margin-left: 0px;
-    }
-
-    .Header {
-        justify-content: center;
-    }
+    align-items: flex-start;
 }

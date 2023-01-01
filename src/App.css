@@ -9,14 +9,7 @@ body {
 }
 
 .App {
-  text-align: center;
-  height: 94vh;
-  margin: 3vh 3vh;
-}
-
-canvas {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
+    text-align: center;
+    height: 94vh;
+    margin: 3vh 3vh;
 }

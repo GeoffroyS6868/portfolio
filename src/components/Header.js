@@ -1,23 +1,18 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
 import "./Header.css";
+import Navigation from "../components/Navigation";
 
-function Header() {
-  return (
-    <header className="Header">
-      <nav>
-        <div className="Link-box">
-          <Link className="Link" to="/">Home</Link>
+function Header(props) {
+    return (
+        <div className="Header">
+            <div className="header-div">
+                <div className="name-div">Geoffroy Stanger</div>
+                <div className="developer-div">Student developer</div>
+                <Navigation page={props.page}></Navigation>
+                {props.children}
+            </div>
         </div>
-        <div className="Link-box">
-          <Link className="Link" to="/about">À propos</Link>
-        </div>
-        <div className="Link-box">
-          <Link className="Link" to="/skills">Compétences</Link>
-        </div>
-      </nav>
-    </header>
-  );
+    );
 }
 
 export default Header;
