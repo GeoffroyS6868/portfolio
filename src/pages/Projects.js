@@ -5,7 +5,11 @@ import Header from "../components/Header";
 function Projects() {
     return (
         <Header page="projects">
-            Page Projects
+            <div className="projects-align">
+                <div className="projects">
+                    In construction
+                </div>
+            </div>
         </Header>
     )
 }
