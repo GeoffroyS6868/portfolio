@@ -1,20 +1,47 @@
 .projects-align {
+    width: 100%;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: row-reverse;
     align-items: flex-end;
     flex-grow: 1;
-    width: 100%;
 }
 
 .projects {
-    border-radius: 2rem;
     padding: 0.5% 1%;
+    width: 18vw;
     display: flex;
-    align-items: center;
-    text-align: justify;
-    font-family: 'Montserrat', sans-serif;
-    color: black;
-    font-weight: 800;
-    font-size: 3vw;
-    background-color: white;
+    flex-direction: column;
+}
+
+.projects ul {
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    white-space: nowrap;
+    width: 100%;
+    padding-left: 0;
+}
+
+.projects ul::-webkit-scrollbar {
+    display: none;
+}
+
+@media screen and (min-width: 800px) {
+    .projects ul {
+        height: 12vw;
+    }
+
+    .projects {
+        width: 20vw;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .projects ul {
+        height: 20vh;
+    }
+
+    .projects {
+        width: 27vw
+    }
 }

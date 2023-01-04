@@ -1,0 +1,48 @@
+.Project {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+    margin-left: 1.5rem;
+    width: 100%;
+}
+
+.Project a {
+    font-family: 'Oswald', sans-serif;
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    filter: drop-shadow(0 0 0.5rem white);
+    transition: filter 0.4s;
+}
+
+.Project a:hover {
+    filter: drop-shadow(0 0 0.7rem rgb(0, 0, 0, 0.5));
+}
+
+.Project div {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-weight: 800;
+    filter: drop-shadow(0 0 0.8rem white);
+}
+
+@media screen and (min-width: 800px) {
+    .Project a {
+        font-size: 2.6vw;
+    }
+
+    .Project div {
+        font-size: 1.6vw;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .Project a {
+        font-size: calc(2.6vw + 1vh);
+    }
+
+    .Project div {
+        font-size: calc(1.6vw + 1vh);
+    }
+}
