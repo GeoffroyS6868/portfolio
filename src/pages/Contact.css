@@ -23,7 +23,6 @@
     font-family: 'Montserrat', sans-serif;
     color: black;
     font-weight: 800;
-    font-size: 1.2vw;
     background-color: white;
 }
 
@@ -33,11 +32,6 @@
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
-}
-
-.logos a {
-    width: 3vw;
-    height: 3vw;
 }
 
 .logo {
@@ -51,4 +45,34 @@ svg {
 
 svg:hover {
     filter: drop-shadow(0 0 0.7rem rgb(0 0 0 / 0.4));
+}
+
+@media screen and (min-width: 800px) {
+    .logos a {
+        width: 3vw;
+        height: 3vw;
+    }
+
+    .email {
+        font-size: 1.2vw;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .logos a {
+        width: 5vh;
+        height: 5vh;
+    }
+
+    .email {
+        font-size: 2vh;
+    }
+
+    .contact {
+        margin-bottom: 2rem;
+    }
+
+    .contact-align {
+        align-items: center;
+    }
 }
